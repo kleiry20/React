@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid div {
+  border: 1px solid;
+  padding: 1rem;
+}
+
+ul {
+  /* list-style-type: none; */
+}
+
+.listItem {
+  border: none !important;
+  display: flex;
+  gap: 1rem;
+}

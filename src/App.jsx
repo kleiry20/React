@@ -1,5 +1,7 @@
 import List from "./components/List/List";
 import UserGreeting from "./components/UserGreeting/UserGreeting";
+import Practice from "./practice";
+import Effect from "./practice/effect";
 import PropsTut from "./props/PropsTut";
 
 function App() {
@@ -31,10 +33,13 @@ function App() {
       <UserGreeting isLoggedIn={true} /> */}
 
       {/* 04 - Rendering Lists */}
-      {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+      {/* {fruits.length > 0 && <List items={fruits} category="Fruits" />}
       {vegetables.length > 0 && (
         <List items={vegetables} category="Vegetables" />
-      )}
+      )} */}
+
+      {/* <Practice /> */}
+      <Effect />
     </>
   );
 }
