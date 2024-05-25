@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 // -State Management (useState,useReducer), Redux toolkit basics (including async thunks)
 // -useEffect
 
-const Practice = () => {
+const Usestate = () => {
   const [name, setName] = useState("Ben");
   const [counter, setCounter] = useState(0);
   //   const [toggleText, setToggleText] = useState("Hi! Can you see me?");
@@ -169,7 +169,7 @@ const Practice = () => {
   );
 };
 
-export default Practice;
+export default Usestate;
 
 const MultiStateComponent = (props) => {
   const { username, email, setUsername, setEmail } = props;

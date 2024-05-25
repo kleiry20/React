@@ -1,7 +1,8 @@
 import List from "./components/List/List";
 import UserGreeting from "./components/UserGreeting/UserGreeting";
-import Practice from "./practice";
-import Effect from "./practice/effect";
+import StateManagement from "./practice/stateManagement";
+import Effect from "./practice/useeffect";
+import Usestate from "./practice/usestate";
 import PropsTut from "./props/PropsTut";
 
 function App() {
@@ -38,8 +39,10 @@ function App() {
         <List items={vegetables} category="Vegetables" />
       )} */}
 
-      {/* <Practice /> */}
-      <Effect />
+      {/* <Usestate />
+      <Effect /> */}
+
+      <StateManagement />
     </>
   );
 }
