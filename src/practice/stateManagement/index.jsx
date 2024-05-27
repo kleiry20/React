@@ -3,12 +3,12 @@ import { useState, useReducer } from "react";
 const StateManagement = () => {
   const [count, setCount] = useState(0);
 
+  //   example 2 - useReducer
   const initialState = { count: 0 };
   //   replace useState with useReducer that takes 2 arguments(reducer function, initialState)
-  const [state, dispatch] = useReducer(countStateReducer, initialState);
+  //   const [state, dispatch] = useReducer(countStateReducer, initialState);
 
   function countStateReducer(state, action) {
-    //  returns (updated state, dispatch function)
     switch (action.type) {
       case "increment":
         return { state: state + 1 };
@@ -18,6 +18,10 @@ const StateManagement = () => {
         throw new Error();
     }
   }
+
+  //   example 3 - useReducer
+  //   const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
 
   return (
     <>
@@ -44,12 +48,17 @@ const StateManagement = () => {
           Decrease
         </button>
       </div>
+
+      {/* ex 3 - tasks reducer  */}
+      <div>
+        <h4> Travel Itinerary</h4>
+        <input type="text" placeholder="enter task" /> <button>Add</button>
+      </div>
     </>
   );
 };
 
 export default StateManagement;
-
 
 // useReducer:
 // The useReducer Hook takes two arguments:
