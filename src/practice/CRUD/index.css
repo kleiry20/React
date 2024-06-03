@@ -1,0 +1,25 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.form {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.centered-div {
+  margin: auto;
+  padding: 1rem;
+}
+
+.false {
+  background-color: red;
+  color: white;
+}
+
+.true {
+  background-color: green;
+  color: white;
+}

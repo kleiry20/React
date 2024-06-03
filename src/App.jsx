@@ -1,5 +1,8 @@
 import List from "./components/List/List";
 import UserGreeting from "./components/UserGreeting/UserGreeting";
+import Assignment from "./practice/CRUD/Assignment";
+import { Crud } from "./practice/CRUD/Crud";
+import Task from "./practice/FoodOrder";
 import StateManagement from "./practice/stateManagement";
 import Effect from "./practice/useeffect";
 import Usestate from "./practice/usestate";
@@ -24,7 +27,7 @@ function App() {
 
   return (
     <>
-      <h3 className="learn">Learn React</h3>
+      {/* <h3 className="learn">Learn React</h3> */}
 
       {/* 02 - props example */}
       {/* <PropsTut /> */}
@@ -42,7 +45,12 @@ function App() {
       {/* <Usestate />
       <Effect /> */}
 
-      <StateManagement />
+      {/* <StateManagement /> */}
+
+      {/* <Task /> */}
+
+      {/* <Crud /> */}
+      <Assignment/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import { useState, useReducer, useEffect } from "react";
 
 const StateManagement = () => {
   const [count, setCount] = useState(0);
@@ -6,7 +6,7 @@ const StateManagement = () => {
   //   example 2 - useReducer
   const initialState = { count: 0 };
   //   replace useState with useReducer that takes 2 arguments(reducer function, initialState)
-  //   const [state, dispatch] = useReducer(countStateReducer, initialState);
+  const [state, dispatch] = useReducer(countStateReducer, initialState);
 
   function countStateReducer(state, action) {
     switch (action.type) {
@@ -19,9 +19,7 @@ const StateManagement = () => {
     }
   }
 
-  //   example 3 - useReducer
-  //   const [tasks, setTasks] = useState(initialTasks);
-  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+  //   example 3 -
 
   return (
     <>
@@ -50,10 +48,8 @@ const StateManagement = () => {
       </div>
 
       {/* ex 3 - tasks reducer  */}
-      <div>
-        <h4> Travel Itinerary</h4>
-        <input type="text" placeholder="enter task" /> <button>Add</button>
-      </div>
+
+      <Crud />
     </>
   );
 };
@@ -68,3 +64,48 @@ export default StateManagement;
 // And it returns:
 // 1 - A stateful value
 // 2 - A dispatch function (to “dispatch” user actions to the reducer)
+
+const Crud = () => {
+  const [data, setData] = useState([]);
+
+  const handleCreate = () => {
+    const newData = {
+      id: Math.random().toString(36).substring(7),
+      name: "New Item",
+    };
+    setData([...data, newData]);
+  };
+
+  const handleUpdate = (id, name) => {
+    const updatedData = data.map((item) => {
+      if (item.id === id) {
+        return { ...item, name };
+      }
+      return item;
+    });
+    setData(updatedData);
+  };
+
+  const handleDelete = (id) => {
+    const filteredData = data.filter((item) => item.id !== id);
+    setData(filteredData);
+  };
+
+  return (
+    <div>
+      <h1>CRUD App</h1>
+      <button onClick={handleCreate}>Create</button>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>
+            {item.name}
+            <button onClick={() => handleUpdate(item.id, "Updated Item")}>
+              Update
+            </button>
+            <button onClick={() => handleDelete(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
