@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Task = () => {
+const FoodOrder = () => {
   const initialTask = {
     id: 0,
     text: "Muesli",
@@ -48,7 +48,7 @@ const Task = () => {
 
   return (
     <div>
-      <h4> Your Tasks </h4>
+      <h4> Your Food List </h4>
       <input
         type="text"
         placeholder="enter task"
@@ -87,4 +87,4 @@ const Task = () => {
   );
 };
 
-export default Task;
+export default FoodOrder;

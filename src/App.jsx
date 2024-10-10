@@ -1,11 +1,12 @@
 import List from "./components/List/List";
 import UserGreeting from "./components/UserGreeting/UserGreeting";
-import Assignment from "./practice/CRUD/Assignment";
+import Assignment from "./practice/misc/CheckPalindrome";
 import { Crud } from "./practice/CRUD/Crud";
-import Task from "./practice/FoodOrder";
-import StateManagement from "./practice/stateManagement";
-import Effect from "./practice/useeffect";
-import Usestate from "./practice/usestate";
+import FoodOrder from "./practice/03 - P - FoodOrder";
+import Task from "./practice/03 - P - FoodOrder";
+import StateManagement from "./practice/04 - P - stateManagement";
+import Effect from "./practice/02 - P - useeffect";
+import Usestate from "./practice/01 - P - usestate";
 import PropsTut from "./props/PropsTut";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     <>
       {/* <h3 className="learn">Learn React</h3> */}
 
+      {/* ---------- Lecture Components --------- */}
       {/* 02 - props example */}
       {/* <PropsTut /> */}
 
@@ -42,15 +44,15 @@ function App() {
         <List items={vegetables} category="Vegetables" />
       )} */}
 
-      {/* <Usestate />
-      <Effect /> */}
+      {/* ---------- Practice Components ----------  */}
+
+      {/* <Usestate /> */}
+      {/* <Effect /> */}
 
       {/* <StateManagement /> */}
 
-      {/* <Task /> */}
-
       {/* <Crud /> */}
-      <Assignment/>
+      {/* <FoodOrder /> */}
     </>
   );
 }

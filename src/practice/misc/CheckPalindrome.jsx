@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./index.css";
+import "../../index.css";
 
-const Assignment = () => {
+const CheckPalindrome = () => {
   //   const [count, setCount] = useState(0);
   const [input, setInput] = useState("");
   const [isPalin, setIsPalin] = useState(false);
@@ -85,4 +85,4 @@ const Assignment = () => {
   );
 };
 
-export default Assignment;
+export default CheckPalindrome;
