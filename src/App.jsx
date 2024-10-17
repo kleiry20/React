@@ -8,6 +8,7 @@ import StateManagement from "./practice/04 - P - stateManagement";
 import Effect from "./practice/02 - P - useeffect";
 import Usestate from "./practice/01 - P - usestate";
 import PropsTut from "./props/PropsTut";
+import { ContextAPI } from "./practice/04 - P - ContextAPI/ContextAPI";
 
 function App() {
   const fruits = [
@@ -53,6 +54,8 @@ function App() {
 
       {/* <Crud /> */}
       {/* <FoodOrder /> */}
+
+      <ContextAPI />
     </>
   );
 }
